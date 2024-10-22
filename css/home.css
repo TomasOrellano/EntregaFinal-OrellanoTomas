@@ -94,15 +94,15 @@ body {
 .seccion-genetica img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-  width: 500px;
-  height: 250px;
-  margin-bottom: 100px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .seccion-estancias img:hover,
 .seccion-genetica img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .seccion-genetica {
@@ -120,43 +120,27 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .seccion-genetica .contenedor {
   position: relative;
-  z-index: 2;
-  text-align: center;
-}
-.seccion-genetica .contenedor h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px rgb(255, 255, 255);
-}
-.seccion-genetica .contenedor p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.seccion-contacto {
-  background-color: #343a40;
-  color: white;
-}
-.seccion-contacto p {
-  margin: 0;
+  z-index: 1;
 }
 
 footer {
   background-color: #a7a7a7;
-  padding: 20px;
+  color: #ffffff;
   text-align: center;
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
+  padding: 20px;
+  font-size: 0.9rem;
 }
-footer a {
+footer p a {
+  color: #fff;
   text-decoration: none;
-  color: #000000;
-  font-weight: bold;
+  margin: 0 10px;
+}
+footer p a:hover {
+  color: #f8f9fa;
 }
 
 /*# sourceMappingURL=home.css.map */

@@ -49,7 +49,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; // Para la superposición
+  position: relative;
 
   &::before {
     content: '';
@@ -59,36 +59,36 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5); // Superposición oscura
-    z-index: 1; // Mantener debajo del texto
+    z-index: 1;
   }
 
   .texto-hero {
-    position: relative; // Para posicionar encima de la superposición
-    z-index: 2; // Mantener encima de la superposición
-    color: #fff; // Color del texto
+    position: relative;
+    z-index: 2;
+    color: #fff;
     text-align: center;
 
     h1 {
-      font-size: 3rem; // Aumentar tamaño del título
-      margin-bottom: 10px; // Espacio debajo del título
-      text-shadow: 2px 2px 4px rgba(233, 233, 233, 0.7); // Sombra para el título
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(233, 233, 233, 0.7);
     }
 
     p {
-      font-size: 1.5rem; // Tamaño del texto
+      font-size: 1.5rem;
     }
 
     a {
       margin-top: 20px;
-      padding: 10px 20px; // Relleno para el botón
-      background-color: $primary-color; // Color de fondo del botón
-      color: #b8b8b8; // Color del texto del botón
-      border-radius: 5px; // Bordes redondeados del botón
-      text-decoration: none; // Sin subrayado
-      font-weight: bold; // Negrita para el texto del botón
+      padding: 10px 20px;
+      background-color: $primary-color;
+      color: #b8b8b8;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
 
       &:hover {
-        background-color: #ffffff; // Color al pasar el mouse
+        background-color: #ffffff;
       }
     }
   }
@@ -97,43 +97,44 @@ body {
 // Sección de Estancias y Genética
 .seccion-estancias,
 .seccion-genetica {
-  background-image: url('../Fixtures/fondoestablecimiento.jpg'); // Cambia la ruta a tu imagen de fondo
-  background-size: cover; // Asegura que la imagen cubra toda la sección
-  background-position: center; // Centra la imagen de fondo
-  background-repeat: no-repeat; // Evita que la imagen se repita
+  background-image: url('../Fixtures/fondoestablecimiento.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   h2 {
     margin-bottom: 30px;
-    background-color: rgba(167, 167, 167, 0.7); // Fondo semi-transparente
-    padding: 15px; // Relleno alrededor del texto
-    border-radius: 10px; // Bordes redondeados
-    font-size: 2rem; // Aumentar tamaño del texto
-    color: #fff; // Color del texto blanco
-    text-shadow: 1px 1px 2px rgba(168, 168, 168, 0.5); // Sombra para mayor contraste
+    background-color: rgba(167, 167, 167, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(168, 168, 168, 0.5);
   }
 
   img {
-    border-radius: 10px; // Bordes redondeados más sutiles
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); // Sombra para las imágenes
-    width: 500px; // Aumenta el ancho inicial
-    height: 250px; // Aumenta la altura inicial
-    margin-bottom: 100px;
-    transition: transform 0.3s ease-in-out; // Transición para la animación
-    transform: scale(1.1); // Establecer el tamaño inicial un poco más grande
-  }
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; // Asegúrate de que esta línea esté presente
+    transform: scale(1.05); // Este es el tamaño inicial
+}
 
-  img:hover {
-    transform: scale(1.2); // Escalar imagen al pasar el mouse
-  }
+img:hover {
+    transform: scale(1.1); // Escala al pasar el mouse
+}
+
 }
 
 // Sección de Genética
 .seccion-genetica {
-  background-image: $genetic-background-image; // Imagen de fondo
+  background-image: $genetic-background-image;
   background-size: cover;
   background-position: center;
-  position: relative; // Para la superposición
-  color: white; // Color del texto
+  position: relative;
+  color: white;
   padding: 50px 0;
 
   &::before {
@@ -143,49 +144,30 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); // Superposición oscura
-    z-index: 1; // Mantener debajo del texto
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .contenedor {
-    position: relative; // Para posicionar encima de la superposición
-    z-index: 2; // Mantener encima de la superposición
-    text-align: center; // Centrar texto
-
-    h2 {
-      font-size: 2.5rem; // Tamaño del título
-      margin-bottom: 20px; // Espacio debajo del título
-      text-shadow: 1px 1px 2px rgb(255, 255, 255); // Sombra para el título
-    }
-
-    p {
-      font-size: 1.2rem; // Tamaño del texto
-      margin-bottom: 30px; // Espacio debajo del párrafo
-    }
+    position: relative;
+    z-index: 1;
   }
 }
 
-// Sección de Contacto
-.seccion-contacto {
-  background-color: $primary-color;
-  color: white;
-
-  p {
-    margin: 0;
-  }
-}
-
-// Pie de Página
+// Footer
 footer {
   background-color: $footer-background-color;
-  padding: 20px;
+  color: $text-color;
   text-align: center;
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
+  padding: 20px;
+  font-size: 0.9rem;
 
-  a {
+  p a {
+    color: #fff;
     text-decoration: none;
-    color: #000000;
-    font-weight: bold;
+    margin: 0 10px;
+
+    &:hover {
+      color: #f8f9fa;
+    }
   }
 }

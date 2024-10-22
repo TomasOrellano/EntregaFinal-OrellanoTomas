@@ -1,8 +1,7 @@
 body {
+  background-image: url("../Fixtures/fondo.png");
   font-family: "Montserrat", sans-serif;
   background-color: #fafafa;
-  background-image: url("../Fixtures/fondo.png");
-  background-size: cover;
   margin: 0;
   padding: 0;
 }
@@ -27,22 +26,12 @@ body {
   box-sizing: border-box;
 }
 
-.mensaje-bienvenida {
-  text-align: center;
-}
-
 .contenedor-titulo {
   margin: 20px 0;
 }
 
 .contenedor-formulario {
   width: 100%;
-}
-
-.grupo-botones {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 .grupo-formulario {
@@ -52,6 +41,7 @@ body {
 footer {
   text-align: center;
   margin-top: 20px;
+  background-color: #6c757d;
 }
 
 /*# sourceMappingURL=index.css.map */

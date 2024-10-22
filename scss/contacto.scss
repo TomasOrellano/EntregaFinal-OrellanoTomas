@@ -11,7 +11,6 @@ $form-background: rgba(255, 255, 255, 0.9); // Fondo del formulario
 $form-shadow: rgba(0, 0, 0, 0.2); // Sombra del formulario
 
 // Estilo general
-
 body {
   font-family: $font-family-base;
   background-image: url('../Fixtures/fondo.png');
@@ -20,11 +19,11 @@ body {
   background-position: center;
   margin: 0;
   padding: 0;
-  height: 100vh; /* Se mantiene para cubrir toda la pantalla */
+  height: 100vh; // Se mantiene para cubrir toda la pantalla
 }
 
 header {
-  width: 100%; /* Asegurarse de que el navbar ocupe todo el ancho */
+  width: 100%; // Asegurarse de que el navbar ocupe todo el ancho
 }
 
 .padre {
@@ -33,20 +32,8 @@ header {
   padding: 20px;
   box-shadow: 0px 0px 15px $form-shadow;
   border-radius: 10px;
-  margin: 20px auto; /* Centrar el contenedor con margen automático */
+  margin: 20px auto; // Centrar el contenedor con margen automático
 }
-
-
-// // Contenedor principal
-// .padre {
-//   width: 100%;
-//   max-width: 500px;
-//   background: $form-background;
-//   padding: 20px;
-//   box-shadow: 0px 0px 15px $form-shadow;
-//   border-radius: 10px;
-//   margin: 20px;
-// }
 
 // Títulos
 h2 {
@@ -113,5 +100,25 @@ footer {
         color: $link-hover-color; // Cambia al pasar el mouse
       }
     }
+  }
+}
+// Estilo para el botón de WhatsApp
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px; // Distancia desde el fondo
+  right: 20px; // Distancia desde la derecha
+  background-color: #ffffff; // Color de fondo de WhatsApp
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgb(255, 255, 255);
+  z-index: 1000; // Asegúrate de que esté en la parte superior
+
+  img {
+    width: 50px; // Ajusta el tamaño del icono según tus necesidades
+    height: auto;
+  }
+
+  &:hover {
+    background-color: darken(#ffffff, 0%); // Cambia el color al pasar el mouse
   }
 }

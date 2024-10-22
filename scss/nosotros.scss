@@ -1,11 +1,11 @@
 // Variables globales
-$font-family-base: 'Montserrat', sans-serif; // Tipografía base
-$background-color-body: #f8f9fa; // Color de fondo del cuerpo
-$background-color-footer: #f9f9f9; // Color de fondo del footer
-$color-link: #7c7c7c; // Color de los enlaces
-$color-link-hover: #000000; // Color de los enlaces al pasar el mouse
-$background-color-title: #ffffff; // Color de fondo del título
-$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra para los contenedores
+$font-family-base: 'Montserrat', sans-serif;
+$background-color-body: #f8f9fa;
+$background-color-footer: #f9f9f9;
+$color-link: #7c7c7c;
+$color-link-hover: #000000;
+$background-color-title: #ffffff;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 // Estilos generales
 body {
@@ -14,42 +14,51 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
     margin: 0;
-    padding: 0;
+    padding-top: 56px; // Ajusta para dejar espacio al navbar fijo
 }
 
-.jumbotron {
-    background-color: $background-color-body;
-    border-radius: 0;
+// Animación de ubicación
+.location-animation {
+    animation: slide-in 1s ease-out;
 }
 
-.section-title {
-    margin: 40px 0;
-    background-color: $background-color-title;
+// Animaciones
+@keyframes slide-in {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-.social-links a {
-    color: $color-link;
-    transition: color 0.3s ease;
-    background-color: $background-color-title; // Fondo blanco
+// Navbar
+.navbar {
+    background-color: #343a40; 
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    z-index: 1000;
 }
 
-.social-links a:hover {
-    color: $color-link-hover;
-    background-color: $background-color-title; // Fondo blanco
-}
-
+// Footer
 footer {
     background-color: $background-color-footer;
     padding: 20px;
     text-align: center;
     font-family: 'Arial', sans-serif;
     font-size: 14px;
-}
 
-footer a {
-    text-decoration: none;
-    color: $color-link-hover; // Color negro
-    font-weight: bold;
+    a {
+        text-decoration: none;
+        color: $color-link-hover;
+        font-weight: bold;
+
+        &:hover {
+            color: $color-link;
+        }
+    }
 }

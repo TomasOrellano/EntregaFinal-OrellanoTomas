@@ -4,30 +4,30 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  text-align: center;
   margin: 0;
-  padding: 0;
+  padding-top: 56px;
 }
 
-.jumbotron {
-  background-color: #f8f9fa;
-  border-radius: 0;
+.location-animation {
+  animation: slide-in 1s ease-out;
 }
 
-.section-title {
-  margin: 40px 0;
-  background-color: #ffffff;
+@keyframes slide-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-
-.social-links a {
-  color: #7c7c7c;
-  transition: color 0.3s ease;
-  background-color: #ffffff;
-}
-
-.social-links a:hover {
-  color: #000000;
-  background-color: #ffffff;
+.navbar {
+  background-color: #343a40;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 footer {
@@ -37,11 +37,13 @@ footer {
   font-family: "Arial", sans-serif;
   font-size: 14px;
 }
-
 footer a {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+}
+footer a:hover {
+  color: #7c7c7c;
 }
 
 /*# sourceMappingURL=nosotros.css.map */

@@ -1,16 +1,23 @@
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
   background-image: url("../Fixtures/fondo.png");
+  background-color: #f8f9fa;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  padding-top: 70px;
 }
 
 .navbar {
-  background-color: #343a40;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
 }
 .navbar .navbar-brand {
   font-size: 1.5rem;
@@ -24,16 +31,36 @@ body {
   color: #8d8d8d;
 }
 
-h1, h2 {
-  color: #343a40;
+h1 {
+  color: #ffffff;
   font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
+h2 {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.carousel-inner .carousel-item {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.carousel-inner .carousel-item.active {
+  opacity: 1;
+}
 .carousel-inner img {
   max-height: 500px;
   object-fit: cover;
-  transition: transform 0.3s;
-  transform: scale 1.1;
+  transition: transform 0.5s;
+  transform: scale(1.1);
   filter: grayscale(100%);
 }
 .carousel-inner img:hover {
@@ -53,6 +80,7 @@ h1, h2 {
 footer {
   background-color: #6b6b6b;
   color: #f8f9fa;
+  padding: 20px 0;
 }
 footer a {
   color: #f8f9fa;

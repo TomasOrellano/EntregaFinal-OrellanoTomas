@@ -2,88 +2,117 @@
 $font-family-base: 'Arial', sans-serif;
 $background-color-body: #f8f9fa;
 $text-color-body: #333;
-$navbar-bg-color: #343a40;
+$navbar-bg-color: transparent; // Cambiado a transparente
 $navbar-text-color: #f8f9fa;
 $navbar-hover-color: #8d8d8d;
-$title-color: #343a40;
+$title-color: #ffffff;
 $carousel-indicator-bg-color: #343a40;
 $carousel-control-color: #6b6b6b;
 $footer-bg-color: #6b6b6b;
 $footer-text-color: #f8f9fa;
 $footer-hover-color: #6b6b6b;
 
-// Estilo general
+// Aplicando imagen de fondo al body
 body {
+  background-image: url('../Fixtures/fondo.png'); // Asegúrate de que esta ruta sea correcta
+  background-color: $background-color-body; // Color de fondo como respaldo
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   font-family: $font-family-base;
-  background-color: $background-color-body;
   color: $text-color-body;
-  background-image: url('../Fixtures/fondo.png');
-  background-size: cover; // Ajusta la imagen para cubrir toda la pantalla
-  background-position: center; // Centra la imagen
-  background-attachment: fixed; // Mantiene la imagen fija cuando se hace scroll
-  background-repeat: no-repeat; // Evita que la imagen se repita
+  padding-top: 70px; // Agregar espacio para que el contenido no quede debajo del navbar
 }
 
 // Navbar
 .navbar {
-  background-color: $navbar-bg-color; // Color oscuro
+  background-color: $navbar-bg-color;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  position: fixed; // Fija el navbar
 
   .navbar-brand {
     font-size: 1.5rem;
-    color: $navbar-text-color; // Texto blanco
+    color: $navbar-text-color;
   }
 
   .nav-link {
-    color: $navbar-text-color; // Texto blanco
+    color: $navbar-text-color;
     padding: 0.8rem;
 
     &:hover {
-      color: $navbar-hover-color; // Amarillo al pasar el mouse
+      color: $navbar-hover-color;
     }
   }
 }
 
 // Títulos del catálogo
-h1, h2 {
-  color: $title-color; // Color oscuro para los títulos
+h1 {
+  color: $title-color;
   font-weight: bold;
-  // background-color: $carousel-control-color; 
+  text-align: center;
+  font-size: 3rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem; // Hacer más pequeño el h1 en pantallas pequeñas
+  }
+}
+
+h2 {
+  color: $title-color;
+  font-weight: bold;
+  text-align: center;
 }
 
 // Carruseles
-.carousel-inner img {
-  max-height: 500px; // Altura máxima para las imágenes del carrusel
-  object-fit: cover; // Ajustar las imágenes para cubrir el espacio
-  transition: transform 0.3s;
-  transform: scale (1.1);
-  // transition: transform 0.3s ease-in-out; // Transición para la animación
-  // transform: scale(1.1); // Establecer el tamaño inicial un poco más grande
-   filter:grayscale(100%); // filtro blanco y negro
-  &:hover {
-    transform: scale(1.3); // Escalar imagen al pasar el mouse
-     filter:grayscale(0%) // filtro blanco y negro
+.carousel-inner {
+  .carousel-item {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; // Efecto de desvanecimiento
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  img {
+    max-height: 500px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    transform: scale(1.1);
+    filter: grayscale(100%);
+    
+    &:hover {
+      transform: scale(1.3); // Escala y rotación al hacer hover
+      filter: grayscale(0%);
+    }
   }
 }
 
 .carousel-indicators li {
-  background-color: $carousel-indicator-bg-color; // Indicadores oscuros
+  background-color: $carousel-indicator-bg-color;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: $carousel-control-color; // Color oscuro para los controles
+  background-color: $carousel-control-color;
 }
 
 // Footer
 footer {
-  background-color: $footer-bg-color; // Fondo oscuro
-  color: $footer-text-color; // Texto blanco
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 20px 0;
 
   a {
-    color: $footer-text-color; // Texto blanco
+    color: $footer-text-color;
 
     &:hover {
-      color: $footer-hover-color; // Cambia al pasar el mouse
+      color: $footer-hover-color;
     }
   }
 }
