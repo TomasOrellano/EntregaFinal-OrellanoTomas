@@ -42,7 +42,7 @@ function filterToros() {
     const filteredToros = toros.filter((toro) =>
         toro.edad.toString().includes(searchValue) ||
         toro.descripcion.toLowerCase().includes(searchValue)
-    );
+        );
 
     // Mostrar toros filtrados
     displayToros(filteredToros);
