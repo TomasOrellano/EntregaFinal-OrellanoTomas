@@ -8,30 +8,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/nosotros.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="Cabaña San Ceferino" content="Criadores de Aberdeen Angus negro y colorado. Situados en Tandil, Argentina.">
     <meta name="keywords" content="Angus, Campo, Tandil, Toros, Vacas">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="home.html">CABAÑA SAN CEFERINO</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nosotros.html">NOSOTROS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="catalogo.html">CATÁLOGO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="venta.html">VENTA</a></li>
-
-                    </ul>
-                </div>
+    <header class="bg-gray-800 bg-opacity-75 text-white py-4">
+        <nav>
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="home.html" class="text-xl font-bold">CABAÑA SAN CEFERINO</a>
+                <ul class="flex space-x-4">
+                    <li><a href="home.html" class="hover:text-yellow-400">HOME</a></li>
+                    <li><a href="nosotros.html" class="hover:text-yellow-400">NOSOTROS</a></li>
+                    <li><a href="catalogo.html" class="hover:text-yellow-400">CATÁLOGO</a></li>
+                    <li><a href="contacto.html" class="hover:text-yellow-400">CONTACTO</a></li>
+                    <li><a href="venta.html" class="hover:text-yellow-400">VENTA</a></li>
+                </ul>
             </div>
         </nav>
     </header>
+    
 
     <main class="container my-5 pt-5">
         <section class="jumbotron text-center">
@@ -48,17 +44,18 @@
         </section>
     </main>
 
-    <footer class="text-center py-4">
+    <footer class="bg-gray-800 text-white py-6 text-center">
         <p>
-            <a href="home.html">HOME</a> | 
-            <a href="contacto.html">CONTACTO</a> | 
-            <a href="catalogo.html">CATÁLOGO</a> | 
-            <a href="nosotros.html">NOSOTROS</a> | 
-            <a href="venta.html">VENTA</a>
+            <a href="home.html" class="hover:text-yellow-400">HOME</a> |
+            <a href="contacto.html" class="hover:text-yellow-400">CONTACTO</a> |
+            <a href="catalogo.html" class="hover:text-yellow-400">CATÁLOGO</a> |
+            <a href="nosotros.html" class="hover:text-yellow-400">NOSOTROS</a> |
+            <a href="venta.html" class="hover:text-yellow-400">VENTA</a>
         </p>
-        <p>De La Canal, Tandil, Argentina.</p>
+        <p class="mt-2">De La Canal, Tandil, Argentina.</p>
         <p>Email: maotandil@gmail.com | Teléfono: +54 2494537710</p>
         <p>© 2024 Orellano Tomas. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>

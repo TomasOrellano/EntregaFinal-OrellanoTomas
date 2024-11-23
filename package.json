@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "segundaentrega": "file:"
+    "segundaentrega": "file:",
+    "tailwindcss": "^3.4.15"
   }
 }

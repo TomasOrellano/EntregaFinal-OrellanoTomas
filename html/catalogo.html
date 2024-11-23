@@ -8,141 +8,112 @@
     <link rel="stylesheet" href="../css/catalogo.css">
     <meta name="description" content="Cabaña San Ceferino, criadores de Aberdeen Angus negro y colorado en Tandil, Argentina.">
     <meta name="keywords" content="Angus, Campo, Tandil, Toros, Vacas">
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="home.html">CABAÑA SAN CEFERINO</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="home.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nosotros.html">NOSOTROS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="venta.html">VENTA</a></li>
-
+    <!-- Header -->
+    <body class="text-gray-800">
+        <header class="bg-gray-800 bg-opacity-75 text-white py-4">
+            <nav>
+                <div class="container mx-auto flex justify-between items-center">
+                    <a href="home.html" class="text-xl font-bold">CABAÑA SAN CEFERINO</a>
+                    <ul class="flex space-x-4">
+                        <li><a href="home.html" class="hover:text-yellow-400">HOME</a></li>
+                        <li><a href="nosotros.html" class="hover:text-yellow-400">NOSOTROS</a></li>
+                        <li><a href="catalogo.html" class="hover:text-yellow-400">CATÁLOGO</a></li>
+                        <li><a href="contacto.html" class="hover:text-yellow-400">CONTACTO</a></li>
+                        <li><a href="venta.html" class="hover:text-yellow-400">VENTA</a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
+    <!-- Main Content -->
     <main class="container my-5">
-        <h1 class="text-center">CATÁLOGO</h1>
+        <h1 class="text-center mb-4">CATÁLOGO</h1>
 
-        <div class="row">
-            <!-- Primer Carrusel -->
-            <div class="col-md-6 mb-4">
-                <h2 class="text-center">TOROS PC</h2>
-                <div id="carruselTorosPC" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="../Fixtures/toros1.png" alt="Toro 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="../Fixtures/toros2.png" alt="Toro 2">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carruselTorosPC" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carruselTorosPC" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Siguiente</span>
-                    </a>
-                </div>
+        <!-- Carrusel -->
+        <div class="relative w-full h-[80vh] bg-slate-800">
+            <!-- Inputs de radio para controlar el carrusel -->
+            <input
+                class="hidden peer/slider1 checkbox"
+                type="radio"
+                name="slider"
+                id="slider1"
+                checked
+            />
+            <input
+                class="hidden peer/slider2 checkbox"
+                type="radio"
+                name="slider"
+                id="slider2"
+            />
+            <input
+                class="hidden peer/slider3 checkbox"
+                type="radio"
+                name="slider"
+                id="slider3"
+            />
+            
+
+            <!-- Contenedor de las diapositivas -->
+            <div
+                class="relative w-[300vw] h-full flex transition-all duration-500 ease-in-out peer-checked/slider1:-left-0 peer-checked/slider2:-left-[100vw] peer-checked/slider3:-left-[200vw]"
+            >
+                <!-- Diapositiva 1 -->
+                <div
+                    class="relative w-full h-full bg-cover bg-center"
+                    style="background-image: url('../Fixtures/toros1.png');"
+                ></div>
+
+                <!-- Diapositiva 2 -->
+                <div
+                    class="relative w-full h-full bg-cover bg-center"
+                    style="background-image: url('../Fixtures/toros2.png');"
+                ></div>
+
+                <!-- Diapositiva 3 -->
+                <div
+                    class="relative w-full h-full bg-cover bg-center"
+                    style="background-image: url('../Fixtures/toros3.png');"
+                ></div>
             </div>
 
-            <!-- Segundo Carrusel -->
-            <div class="col-md-6 mb-4">
-                <h2 class="text-center">VACAS PP</h2>
-                <div id="carruselVacasPP" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="../Fixtures/vacas1.png" alt="Vaca 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="../Fixtures/vacas2.png" alt="Vaca 2">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carruselVacasPP" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carruselVacasPP" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Siguiente</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Tercer Carrusel -->
-            <div class="col-md-6 mb-4">
-                <h2 class="text-center">VAQUILLONAS</h2>
-                <div id="carruselVaquillonas" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="../Fixtures/vacas3.png" alt="Vaquillona 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="../Fixtures/terneros2.png" alt="Vaquillona 2">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carruselVaquillonas" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carruselVaquillonas" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Siguiente</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Cuarto Carrusel -->
-            <div class="col-md-6 mb-4">
-                <h2 class="text-center">REPRODUCTORES</h2>
-                <div id="carruselReproductores" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="../Fixtures/terneropp.png" alt="Reproductor 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="../Fixtures/terneros1.png" alt="Reproductor 2">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carruselReproductores" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carruselReproductores" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Siguiente</span>
-                    </a>
-                </div>
+            <!-- Indicadores del carrusel -->
+            <div class="absolute w-full flex justify-center gap-2 bottom-12">
+                <label
+                    class="block w-5 h-5 bg-white cursor-pointer opacity-50 z-10 transition-all duration-300 ease-in-out hover:scale-125 hover:opacity-100"
+                    for="slider1"
+                ></label>
+                <label
+                    class="block w-5 h-5 bg-white cursor-pointer opacity-50 z-10 transition-all duration-300 ease-in-out hover:scale-125 hover:opacity-100"
+                    for="slider2"
+                ></label>
+                <label
+                    class="block w-5 h-5 bg-white cursor-pointer opacity-50 z-10 transition-all duration-300 ease-in-out hover:scale-125 hover:opacity-100"
+                    for="slider3"
+                ></label>
             </div>
         </div>
     </main>
 
-    <footer class="text-center py-4">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
         <p>
-            <a href="home.html">HOME</a> | 
-            <a href="contacto.html">CONTACTO</a> | 
-            <a href="catalogo.html">CATÁLOGO</a> | 
-            <a href="nosotros.html">NOSOTROS</a> | 
-            <a href="venta.html">VENTA</a>
+            <a href="home.html" class="hover:text-yellow-400">HOME</a> |
+            <a href="contacto.html" class="hover:text-yellow-400">CONTACTO</a> |
+            <a href="catalogo.html" class="hover:text-yellow-400">CATÁLOGO</a> |
+            <a href="nosotros.html" class="hover:text-yellow-400">NOSOTROS</a> |
+            <a href="venta.html" class="hover:text-yellow-400">VENTA</a>
         </p>
-        <p>De La Canal, Tandil, Argentina.</p>
+        <p class="mt-2">De La Canal, Tandil, Argentina.</p>
         <p>Email: maotandil@gmail.com | Teléfono: +54 2494537710</p>
         <p>© 2024 Orellano Tomas. Todos los derechos reservados.</p>
     </footer>
 
+
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
